@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  color: #ebd1b1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background: url("./assets/la-8bit.jpg");
+  background-position: center center; 
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav_container {
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav_logo {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav_links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 100%;
+  background-color: inherit;
+}
+
+.nav_links a {
+  padding: 5px;
+  margin: 20px 0;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+  background-color: inherit;
+}
+
+.nav_links a:hover {
+  color: #7bb4ab;
+  border-bottom: 2px solid #7bb4ab;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.title {
+  margin: auto;
+  width: 90%;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.btn_link_container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.btn_link {
+  width: 80%;
+  background-color: #28323f;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 2px;
+}
+
+.btn_link:hover {
+  background-color: #425469;
+  color: #4585c3;
+  transition: all 0.4s;
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 767px) {
+
+  .nav_container {
+    justify-content: space-between;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav_logo {
+    display: contents;
+    width: 25%;
   }
+
+  .logo_text {
+    margin-left: 5em;
+    font-size: 1.5em;
+  }
+
+  .nav_links {
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  .nav_links a {
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+
+  .title {
+    width: 60%;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .btn_link {
+    width: 33%;
+  }
+
 }
